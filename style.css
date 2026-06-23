@@ -211,3 +211,34 @@ body{
     font-size: 13px;
   }
 }
+
+
+/* Desktop: sidebar on left, content on right */
+@media (min-width: 769px) {
+  .resume {
+    grid-template-columns: 300px 1fr;
+  }
+  
+  .resume .sidebar {
+    order: 1;
+  }
+  
+  .resume .content {
+    order: 2;
+  }
+}
+
+/* Mobile: content on top, sidebar below */
+@media (max-width: 768px) {
+  .resume {
+    grid-template-columns: 1fr;
+  }
+  
+  .resume .sidebar {
+    order: 2;
+  }
+  
+  .resume .content {
+    order: 1;
+  }
+}
